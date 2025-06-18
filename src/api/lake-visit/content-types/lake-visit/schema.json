@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lake_visits",
+  "info": {
+    "singularName": "lake-visit",
+    "pluralName": "lake-visits",
+    "displayName": "lake-visit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startdate": {
+      "type": "datetime"
+    },
+    "enddate": {
+      "type": "datetime"
+    }
+  }
+}
