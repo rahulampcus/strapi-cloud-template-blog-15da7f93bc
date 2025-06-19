@@ -402,46 +402,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
-  collectionName: 'articles';
-  info: {
-    description: 'Create your blog content';
-    displayName: 'Article';
-    pluralName: 'articles';
-    singularName: 'article';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
-    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::article.article'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'>;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
@@ -454,7 +414,6 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -486,7 +445,6 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -552,25 +510,36 @@ export interface ApiLakeVisitLakeVisit extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    enddate: Schema.Attribute.DateTime;
+    endDate: Schema.Attribute.Date;
+    lake: Schema.Attribute.Relation<'manyToOne', 'api::lake.lake'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::lake-visit.lake-visit'
     > &
       Schema.Attribute.Private;
+    officer_name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    startdate: Schema.Attribute.DateTime;
+    startDate: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visit_date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    visit_reports: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visit-report.visit-report'
+    >;
+    visit_type: Schema.Attribute.Enumeration<
+      ['Survey', 'Stock Check', 'Monitoring']
+    > &
+      Schema.Attribute.Required;
   };
 }
 
 export interface ApiLakeLake extends Struct.CollectionTypeSchema {
   collectionName: 'lakes';
   info: {
-    displayName: 'lake';
+    displayName: 'lake ';
     pluralName: 'lakes';
     singularName: 'lake';
   };
@@ -578,16 +547,73 @@ export interface ApiLakeLake extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    area: Schema.Attribute.String;
+    area_hectares: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    completedYear: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    depth_avg: Schema.Attribute.Decimal;
+    district: Schema.Attribute.String & Schema.Attribute.Required;
+    division: Schema.Attribute.String & Schema.Attribute.Required;
+    fisheryTransferYear: Schema.Attribute.String;
+    lake_visits: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lake-visit.lake-visit'
+    >;
+    lakeName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lake.lake'> &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+    maxHector: Schema.Attribute.Decimal;
+    minHector: Schema.Attribute.Decimal;
+    owner: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    size: Schema.Attribute.String;
+    registeredInstitute: Schema.Attribute.Text;
+    registeredInstituteCount: Schema.Attribute.Integer;
+    taluka: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    waterStorageMonth: Schema.Attribute.String;
+  };
+}
+
+export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
+  collectionName: 'visit_reports';
+  info: {
+    displayName: 'visit-report';
+    pluralName: 'visit-reports';
+    singularName: 'visit-report';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    disease_signs: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    fish_count: Schema.Attribute.BigInteger;
+    lab_sample_taken: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    lake_visit: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::lake-visit.lake-visit'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visit-report.visit-report'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    report_date: Schema.Attribute.DateTime;
+    report_detail: Schema.Attribute.RichText & Schema.Attribute.Required;
+    report_file: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    report_title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1104,12 +1130,12 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
-      'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::lake-visit.lake-visit': ApiLakeVisitLakeVisit;
       'api::lake.lake': ApiLakeLake;
+      'api::visit-report.visit-report': ApiVisitReportVisitReport;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

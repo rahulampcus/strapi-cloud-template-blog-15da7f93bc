@@ -4,21 +4,64 @@
   "info": {
     "singularName": "lake",
     "pluralName": "lakes",
-    "displayName": "lake"
+    "displayName": "lake "
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "division": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "type": "string",
+      "required": true
+    },
+    "area_hectares": {
+      "type": "decimal",
+      "required": true
+    },
+    "depth_avg": {
+      "type": "decimal"
+    },
+    "lake_visits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lake-visit.lake-visit",
+      "mappedBy": "lake"
+    },
+    "taluka": {
+      "type": "string",
+      "required": true
+    },
+    "lakeName": {
       "type": "string"
     },
-    "area": {
+    "minHector": {
+      "type": "decimal"
+    },
+    "maxHector": {
+      "type": "decimal"
+    },
+    "waterStorageMonth": {
       "type": "string"
     },
-    "size": {
+    "owner": {
       "type": "string"
+    },
+    "completedYear": {
+      "type": "string"
+    },
+    "fisheryTransferYear": {
+      "type": "string"
+    },
+    "registeredInstitute": {
+      "type": "text"
+    },
+    "registeredInstituteCount": {
+      "type": "integer"
     }
   }
 }

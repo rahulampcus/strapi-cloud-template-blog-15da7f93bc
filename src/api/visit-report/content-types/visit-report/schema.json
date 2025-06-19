@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visit_reports",
+  "info": {
+    "singularName": "visit-report",
+    "pluralName": "visit-reports",
+    "displayName": "visit-report"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "report_title": {
+      "type": "string",
+      "required": true
+    },
+    "report_date": {
+      "type": "datetime"
+    },
+    "fish_count": {
+      "type": "biginteger"
+    },
+    "disease_signs": {
+      "type": "boolean",
+      "required": true
+    },
+    "lab_sample_taken": {
+      "type": "boolean",
+      "required": true
+    },
+    "report_detail": {
+      "type": "richtext",
+      "required": true
+    },
+    "report_file": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "lake_visit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lake-visit.lake-visit",
+      "inversedBy": "visit_reports"
+    }
+  }
+}

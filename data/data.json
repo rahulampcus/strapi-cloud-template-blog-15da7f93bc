@@ -237,5 +237,39 @@
         }
       ]
     }
+  ],
+  "lakes": [
+    {
+      "id": 1,
+      "division": "Lake Tahoe",
+      "district": "lake-tahoe",
+      "area_hectares": "Lake Tahoe is a large, stunning freshwater lake in the Sierra Nevada mountains of the United States.",
+      "depth_avg": "lake-tahoe.jpg",
+      "lake_visits": [
+
+        {
+          "visit_date": "2023-07-15T10:00:00.000Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "2023-07-15",
+          "endDate": "2023-07-16"
+        }
+      ],
+      "taluka": "Lake Tahoe is a large, stunning freshwater lake in the Sierra Nevada, California.",
+      "lakeName": "Lake Tahoe",
+      "minHector": 49000,
+      "maxHector": 50000,
+      "waterStorageMonth": "July",
+      "owner": "California State Parks",
+      "completedYear": "1960",
+      "fisheryTransferYear": "1965",
+      "registeredInstitute": "Lake Tahoe Conservancy",
+      "registeredInstituteCount": 5
+
+
+    }
+   
   ]
+  
+  
 }
