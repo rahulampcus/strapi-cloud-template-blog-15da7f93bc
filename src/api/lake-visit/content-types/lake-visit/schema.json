@@ -13,15 +13,15 @@
   "attributes": {
     "visit_date": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "officer_name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "visit_type": {
       "type": "enumeration",
-      "required": true,
+      "required": false,
       "enum": [
         "Survey",
         "Stock Check",
@@ -40,11 +40,35 @@
       "target": "api::lake.lake",
       "inversedBy": "lake_visits"
     },
-    "visit_reports": {
+    "visit_report": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::visit-report.visit-report",
-      "mappedBy": "lake_visit"
+      "inversedBy": "lake_visit"
+    },
+    "visitStatus": {
+      "type": "enumeration",
+      "default": "NOT-STARTED",
+      "enum": [
+        "NOT-STARTED",
+        "PENDING",
+        "COMPLETED",
+        "IN-PROGRESS",
+        "IN-REVIEW",
+        "OFFICE-REJECTED",
+        "NEED-MORE-INFO"
+      ]
+    },
+    "officerRemark": {
+      "type": "enumeration",
+      "enum": [
+        "APPROVED",
+        "REJECTED",
+        "NEED-MORE-INFO"
+      ]
+    },
+    "officerRemarkInfo": {
+      "type": "text"
     }
   }
 }

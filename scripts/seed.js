@@ -9,7 +9,8 @@ const {
   articles,
   global,
   about,
-  lake,
+  lakes,
+  lake_visits,
 } = require("../data/data.json");
 
 async function seedExampleApp() {
@@ -42,7 +43,7 @@ async function isFirstRun() {
   });
   const initHasRun = await pluginStore.get({ key: "initHasRun" });
   await pluginStore.set({ key: "initHasRun", value: true });
-  return !initHasRun;
+  return true;
 }
 
 async function setPublicPermissions(newPermissions) {
@@ -115,6 +116,7 @@ async function createEntry({ model, entry }) {
     // Actually create the entry in Strapi
     await strapi.documents(`api::${model}.${model}`).create({
       data: entry,
+      status: "published",
     });
   } catch (error) {
     console.error({ model, entry, error });
@@ -251,7 +253,7 @@ async function importAuthors() {
 }
 
 async function importLake() {
-  for (const lakeobj of lake) {
+  for (const lakeobj of lakes) {
     // const cover = await checkFileExistsBeforeUpload([`${article.slug}.jpg`]);
     // const updatedBlocks = await updateBlocks(article.blocks);
 
@@ -268,24 +270,44 @@ async function importLake() {
   }
 }
 
+async function importLakeVisits() {
+  for (const lakeobj of lake_visits) {
+    // const cover = await checkFileExistsBeforeUpload([`${article.slug}.jpg`]);
+    // const updatedBlocks = await updateBlocks(article.blocks);
+
+    await createEntry({
+      model: "lake-visit",
+      entry: {
+        ...lakeobj,
+        // cover,
+        // blocks: updatedBlocks,
+        // Make sure it's not a draft
+        publishedAt: Date.now(),
+      },
+    });
+  }
+}
+
 async function importSeedData() {
   // Allow read of application content types
   await setPublicPermissions({
-    article: ["find", "findOne"],
-    category: ["find", "findOne"],
-    author: ["find", "findOne"],
-    global: ["find", "findOne"],
-    about: ["find", "findOne"],
+    // article: ["find", "findOne"],
+    // category: ["find", "findOne"],
+    // author: ["find", "findOne"],
+    // global: ["find", "findOne"],
+    // about: ["find", "findOne"],
     lake: ["find", "findOne"],
+    lake_visit: ["find", "findOne"],
   });
 
   // Create all entries
-  await importCategories();
-  await importAuthors();
-  await importArticles();
-  await importGlobal();
-  await importAbout();
-  await importLake();
+  // await importCategories();
+  // await importAuthors();
+  // await importArticles();
+  // await importGlobal();
+  // await importAbout();
+  // await importLake();
+  // await importLakeVisits();
 }
 
 async function main() {
@@ -295,6 +317,8 @@ async function main() {
   const app = await createStrapi(appContext).load();
 
   app.log.level = "error";
+
+  console.log("Test >>>>>>>>>>>>>>>>");
 
   await seedExampleApp();
   await app.destroy();

@@ -46,9 +46,9 @@
     },
     "lake_visit": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToOne",
       "target": "api::lake-visit.lake-visit",
-      "inversedBy": "visit_reports"
+      "mappedBy": "visit_report"
     }
   }
 }

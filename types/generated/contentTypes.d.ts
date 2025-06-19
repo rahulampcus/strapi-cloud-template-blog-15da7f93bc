@@ -518,21 +518,36 @@ export interface ApiLakeVisitLakeVisit extends Struct.CollectionTypeSchema {
       'api::lake-visit.lake-visit'
     > &
       Schema.Attribute.Private;
-    officer_name: Schema.Attribute.String & Schema.Attribute.Required;
+    officer_name: Schema.Attribute.String;
+    officerRemark: Schema.Attribute.Enumeration<
+      ['APPROVED', 'REJECTED', 'NEED-MORE-INFO']
+    >;
+    officerRemarkInfo: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     startDate: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    visit_date: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    visit_reports: Schema.Attribute.Relation<
-      'oneToMany',
+    visit_date: Schema.Attribute.DateTime;
+    visit_report: Schema.Attribute.Relation<
+      'oneToOne',
       'api::visit-report.visit-report'
     >;
     visit_type: Schema.Attribute.Enumeration<
       ['Survey', 'Stock Check', 'Monitoring']
+    >;
+    visitStatus: Schema.Attribute.Enumeration<
+      [
+        'NOT-STARTED',
+        'PENDING',
+        'COMPLETED',
+        'IN-PROGRESS',
+        'IN-REVIEW',
+        'OFFICE-REJECTED',
+        'NEED-MORE-INFO',
+      ]
     > &
-      Schema.Attribute.Required;
+      Schema.Attribute.DefaultTo<'NOT-STARTED'>;
   };
 }
 
@@ -561,6 +576,7 @@ export interface ApiLakeLake extends Struct.CollectionTypeSchema {
       'api::lake-visit.lake-visit'
     >;
     lakeName: Schema.Attribute.String;
+    lakePhoto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lake.lake'> &
       Schema.Attribute.Private;
@@ -596,7 +612,7 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
     fish_count: Schema.Attribute.BigInteger;
     lab_sample_taken: Schema.Attribute.Boolean & Schema.Attribute.Required;
     lake_visit: Schema.Attribute.Relation<
-      'manyToOne',
+      'oneToOne',
       'api::lake-visit.lake-visit'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

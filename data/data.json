@@ -241,20 +241,10 @@
   "lakes": [
     {
       "id": 1,
-      "division": "Lake Tahoe",
-      "district": "lake-tahoe",
-      "area_hectares": "Lake Tahoe is a large, stunning freshwater lake in the Sierra Nevada mountains of the United States.",
-      "depth_avg": "lake-tahoe.jpg",
-      "lake_visits": [
-
-        {
-          "visit_date": "2023-07-15T10:00:00.000Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "2023-07-15",
-          "endDate": "2023-07-16"
-        }
-      ],
+      "division": "Pune",
+      "district": "Pune",
+      "area_hectares": 123.11,
+      "depth_avg": 213.33,
       "taluka": "Lake Tahoe is a large, stunning freshwater lake in the Sierra Nevada, California.",
       "lakeName": "Lake Tahoe",
       "minHector": 49000,
@@ -264,12 +254,67 @@
       "completedYear": "1960",
       "fisheryTransferYear": "1965",
       "registeredInstitute": "Lake Tahoe Conservancy",
-      "registeredInstituteCount": 5
-
-
+      "registeredInstituteCount": 5,
+      "lakePhoto": 12
     }
    
-  ]
+  ],
+  "lake_visits": [
+        {
+          "id":1,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "1970-01-01",
+          "endDate": "1970-01-02",
+          "lake": {"id" : 1}
+        },
+         {
+          "id":2,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "1970-01-01",
+          "endDate": "1970-01-02",
+          "lake": {"id" : 1}
+        },
+         {
+          "id":3,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "2025-06-01",
+          "endDate": "2025-06-20",
+          "lake": {"id" : 1}
+        },
+         {
+          "id":4,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "1970-01-01",
+          "endDate": "1970-01-02",
+          "lake": {"id" : 1}
+        },
+         {
+          "id":5,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "1970-01-01",
+          "endDate": "1970-01-02",
+          "lake": {"id" : 1}
+        },
+         {
+          "id":6,
+          "visit_date": "1970-01-01T00:00:00Z",
+          "officer_name": "John Doe",
+          "visit_type": "Survey",
+          "startDate": "1970-01-01",
+          "endDate": "1970-01-02",
+          "lake": {"id" : 1}
+        }
+      ]
   
   
 }
