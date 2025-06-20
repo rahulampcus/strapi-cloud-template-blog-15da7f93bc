@@ -291,23 +291,23 @@ async function importLakeVisits() {
 async function importSeedData() {
   // Allow read of application content types
   await setPublicPermissions({
-    // article: ["find", "findOne"],
-    // category: ["find", "findOne"],
-    // author: ["find", "findOne"],
-    // global: ["find", "findOne"],
-    // about: ["find", "findOne"],
+    article: ["find", "findOne"],
+    category: ["find", "findOne"],
+    author: ["find", "findOne"],
+    global: ["find", "findOne"],
+    about: ["find", "findOne"],
     lake: ["find", "findOne"],
     lake_visit: ["find", "findOne"],
   });
 
-  // Create all entries
-  // await importCategories();
-  // await importAuthors();
-  // await importArticles();
-  // await importGlobal();
-  // await importAbout();
-  // await importLake();
-  // await importLakeVisits();
+  //Create all entries
+  await importCategories();
+  await importAuthors();
+  await importArticles();
+  await importGlobal();
+  await importAbout();
+  await importLake();
+  await importLakeVisits();
 }
 
 async function main() {

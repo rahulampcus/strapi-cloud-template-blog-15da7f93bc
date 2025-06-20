@@ -238,83 +238,531 @@
       ]
     }
   ],
+
+
+
   "lakes": [
     {
       "id": 1,
-      "division": "Pune",
-      "district": "Pune",
-      "area_hectares": 123.11,
-      "depth_avg": 213.33,
-      "taluka": "Lake Tahoe is a large, stunning freshwater lake in the Sierra Nevada, California.",
-      "lakeName": "Lake Tahoe",
-      "minHector": 49000,
-      "maxHector": 50000,
-      "waterStorageMonth": "July",
-      "owner": "California State Parks",
-      "completedYear": "1960",
-      "fisheryTransferYear": "1965",
-      "registeredInstitute": "Lake Tahoe Conservancy",
-      "registeredInstituteCount": 5,
-      "lakePhoto": 12
+      "division": "अमरावती विभाग",
+      "district": "अमरावती",
+      "area_hectares": 175,
+      "depth_avg": 16.23,
+      "taluka": "अचलपूर",
+      "lakeName": "चंद्रभागा",
+      "minHector": null,
+      "maxHector": null,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "अचलपूर लघु व मध्यम",
+      "completedYear": "",
+      "fisheryTransferYear": "1989",
+      "registeredInstitute": "जय भवानी मससं,धामणगाव गढी",
+      "registeredInstituteCount": 1
+    
+    },
+
+    {
+      "id": 2,
+      "division": "अमरावती विभाग",
+      "district": "बुलडाणा",
+      "area_hectares": 2588,
+      "depth_avg": 15,
+      "taluka": "देउळगाव राजा",
+      "lakeName": "खडकपूर्णा",
+      "minHector": null,
+      "maxHector": null,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "पाटबंधारे विभाग, बुलडाणा",
+      "completedYear": "2010",
+      "fisheryTransferYear": "2010",
+      "registeredInstitute": "स्व.भास्कराव शिगणे मससं,गारखेड 2)सहकार महर्षी कै.भास्करराव शिंगणे गारखेड 3)खडकपूर्णा मससं,चिचखेड 6) जय भवानी मससं,सिनगाव जहॉगीर 7)स्व.गणेश भास्करराव शिगणे सिनगाव जहॉगीर 8)महात्मा फुले मससं,सिनगाव जहॉगीर 9)भगवान बाबा मससं,गारगुडी 10)जय गजानन मससं,बायगाव",
+      "registeredInstituteCount": 10
+     
+    },
+    {
+      "id": 3,
+      "division": "अमरावती विभाग",
+      "district": "वाशिम",
+      "area_hectares": 112,
+      "depth_avg": 6.5,
+      "taluka": "कारंजा",
+      "lakeName": "झोडगा",
+      "minHector": 42.44,
+      "maxHector": 182,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "पा.बं.",
+      "completedYear": "",
+      "fisheryTransferYear": "2009",
+      "registeredInstitute": "विकासगंगा मससं,झोडगा २)जय महारात मससं,कारंजा",
+      "registeredInstituteCount": 2
+     
+    },
+    {
+      "id": 4,
+      "division": "अमरावती विभाग",
+      "district": "वाशिम",
+      "area_hectares": 740,
+      "depth_avg": 6.2,
+      "taluka": "कारंजा",
+      "lakeName": "अडाण",
+      "minHector": 88,
+      "maxHector": 1392,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "पा.बं.",
+      "completedYear": "",
+      "fisheryTransferYear": "",
+      "registeredInstitute": "दिघी म्ह्सणी अडाण प्रकल्प मससं, दिघी 2)जयभवानी मससं,कामठवाडा 3)बागापुर मससं,उबरडा बाजार",
+      "registeredInstituteCount": 3
+     
+    },
+    {
+      "id": 5,
+      "division": "नागपूर विभाग",
+      "district": "गोंदिया",
+      "area_hectares": 112,
+      "depth_avg": 5.03,
+      "taluka": "गोंदिया",
+      "lakeName": "पांगडी",
+      "minHector": 28,
+      "maxHector": 196,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "कार्यकारी अभियंता गोंदिया पाटबंधारे विभाग",
+      "completedYear": "1917",
+      "fisheryTransferYear": "",
+      "registeredInstitute": "सदर तलावावर संस्था नोंदणीकृत नाही",
+      "registeredInstituteCount": 0
+    
+    },
+    {
+      "id": 6,
+      "division": "नाशिक विभाग",
+      "district": "नाशिक",
+      "area_hectares": 3290,
+      "depth_avg": 33,
+      "taluka": "मालेगाव",
+      "lakeName": "गिरणा",
+      "minHector": 1500,
+      "maxHector": 5083,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "गिरणा पाटबंधारे विभाग",
+      "completedYear": "",
+      "fisheryTransferYear": "1976",
+      "registeredInstitute": "1. गिरणा प्राथ.भुजलाशयीन मत्स्य व्यवसाय सह.संस्था म.येसगाव बु॥ 2. जय दुर्गा सहकारी म.स.सं. मर्या, चंदनपुरी, ता.मालेगाव, जि. नाशिक",
+      "registeredInstituteCount": 2
+    
+    },
+    {
+      "id": 7,
+      "division": "पुणे विभाग",
+      "district": "सातारा",
+      "area_hectares": 812,
+      "depth_avg": null,
+      "taluka": "माण",
+      "lakeName": "राजेवाडी",
+      "minHector": 147,
+      "maxHector": 1476,
+      "waterStorageMonth": "१२ महिने",
+      "owner": "निरा उजवा कालवा विभाग सातारा",
+      "completedYear": "",
+      "fisheryTransferYear": "2000",
+      "registeredInstitute": "देवापूर म.स.सं.मर्या. देवापूर,ता.माण,जि.सातारा",
+      "registeredInstituteCount": 1
+     
     }
-   
   ],
+
+ 
   "lake_visits": [
-        {
-          "id":1,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "1970-01-01",
-          "endDate": "1970-01-02",
-          "lake": {"id" : 1}
-        },
-         {
-          "id":2,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "1970-01-01",
-          "endDate": "1970-01-02",
-          "lake": {"id" : 1}
-        },
-         {
-          "id":3,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "2025-06-01",
-          "endDate": "2025-06-20",
-          "lake": {"id" : 1}
-        },
-         {
-          "id":4,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "1970-01-01",
-          "endDate": "1970-01-02",
-          "lake": {"id" : 1}
-        },
-         {
-          "id":5,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "1970-01-01",
-          "endDate": "1970-01-02",
-          "lake": {"id" : 1}
-        },
-         {
-          "id":6,
-          "visit_date": "1970-01-01T00:00:00Z",
-          "officer_name": "John Doe",
-          "visit_type": "Survey",
-          "startDate": "1970-01-01",
-          "endDate": "1970-01-02",
-          "lake": {"id" : 1}
-        }
-      ]
-  
-  
+   
+    {
+      "id": 1,
+      "visit_date": "2025-05-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-10",
+      "lake": {"id": 1}
+    },
+    {
+      "id": 2,
+      "visit_date": "2025-06-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-06-01",
+      "endDate": "2025-06-10",
+      "lake": {"id": 1}
+    },
+    {
+      "id": 3,
+      "visit_date": "2025-07-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-07-01",
+      "endDate": "2025-07-10",
+      "lake": {"id": 1}
+    },
+    {
+      "id": 4,
+      "visit_date": "2025-08-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-08-01",
+      "endDate": "2025-08-10",
+      "lake": {"id": 1}
+    },
+    {
+      "id": 5,
+      "visit_date": "2025-09-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-09-01",
+      "endDate": "2025-09-10",
+      "lake": {"id": 1}
+    },
+    {
+      "id": 6,
+      "visit_date": "2025-10-15T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-10-01",
+      "endDate": "2025-10-10",
+      "lake": {"id": 1}
+    },
+
+   
+    {
+      "id": 7,
+      "visit_date": "2025-05-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-05-02",
+      "endDate": "2025-05-12",
+      "lake": {"id": 2}
+    },
+    {
+      "id": 8,
+      "visit_date": "2025-06-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-06-02",
+      "endDate": "2025-06-12",
+      "lake": {"id": 2}
+    },
+    {
+      "id": 9,
+      "visit_date": "2025-07-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-07-02",
+      "endDate": "2025-07-12",
+      "lake": {"id": 2}
+    },
+    {
+      "id": 10,
+      "visit_date": "2025-08-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-08-02",
+      "endDate": "2025-08-12",
+      "lake": {"id": 2}
+    },
+    {
+      "id": 11,
+      "visit_date": "2025-09-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-09-02",
+      "endDate": "2025-09-12",
+      "lake": {"id": 2}
+    },
+    {
+      "id": 12,
+      "visit_date": "2025-10-16T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-10-02",
+      "endDate": "2025-10-12",
+      "lake": {"id": 2}
+    },
+
+   
+    {
+      "id": 13,
+      "visit_date": "2025-05-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-05-03",
+      "endDate": "2025-05-13",
+      "lake": {"id": 3}
+    },
+    {
+      "id": 14,
+      "visit_date": "2025-06-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-06-03",
+      "endDate": "2025-06-13",
+      "lake": {"id": 3}
+    },
+    {
+      "id": 15,
+      "visit_date": "2025-07-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-07-03",
+      "endDate": "2025-07-13",
+      "lake": {"id": 3}
+    },
+    {
+      "id": 16,
+      "visit_date": "2025-08-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-08-03",
+      "endDate": "2025-08-13",
+      "lake": {"id": 3}
+    },
+    {
+      "id": 17,
+      "visit_date": "2025-09-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-09-03",
+      "endDate": "2025-09-13",
+      "lake": {"id": 3}
+    },
+    {
+      "id": 18,
+      "visit_date": "2025-10-17T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-10-03",
+      "endDate": "2025-10-13",
+      "lake": {"id": 3}
+    },
+
+    
+    {
+      "id": 19,
+      "visit_date": "2025-05-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-05-04",
+      "endDate": "2025-05-14",
+      "lake": {"id": 4}
+    },
+    {
+      "id": 20,
+      "visit_date": "2025-06-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-06-04",
+      "endDate": "2025-06-14",
+      "lake": {"id": 4}
+    },
+    {
+      "id": 21,
+      "visit_date": "2025-07-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-07-04",
+      "endDate": "2025-07-14",
+      "lake": {"id": 4}
+    },
+    {
+      "id": 22,
+      "visit_date": "2025-08-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-08-04",
+      "endDate": "2025-08-14",
+      "lake": {"id": 4}
+    },
+    {
+      "id": 23,
+      "visit_date": "2025-09-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-09-04",
+      "endDate": "2025-09-14",
+      "lake": {"id": 4}
+    },
+    {
+      "id": 24,
+      "visit_date": "2025-10-18T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-10-04",
+      "endDate": "2025-10-14",
+      "lake": {"id": 4}
+    },
+
+    
+    {
+      "id": 25,
+      "visit_date": "2025-05-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-05-05",
+      "endDate": "2025-05-15",
+      "lake": {"id": 5}
+    },
+    {
+      "id": 26,
+      "visit_date": "2025-06-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-06-05",
+      "endDate": "2025-06-15",
+      "lake": {"id": 5}
+    },
+    {
+      "id": 27,
+      "visit_date": "2025-07-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-07-05",
+      "endDate": "2025-07-15",
+      "lake": {"id": 5}
+    },
+    {
+      "id": 28,
+      "visit_date": "2025-08-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-08-05",
+      "endDate": "2025-08-15",
+      "lake": {"id": 5}
+    },
+    {
+      "id": 29,
+      "visit_date": "2025-09-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-09-05",
+      "endDate": "2025-09-15",
+      "lake": {"id": 5}
+    },
+    {
+      "id": 30,
+      "visit_date": "2025-10-19T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-10-05",
+      "endDate": "2025-10-15",
+      "lake": {"id": 5}
+    },
+
+    
+    {
+      "id": 31,
+      "visit_date": "2025-05-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-05-06",
+      "endDate": "2025-05-16",
+      "lake": {"id": 6}
+    },
+    {
+      "id": 32,
+      "visit_date": "2025-06-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-06-06",
+      "endDate": "2025-06-16",
+      "lake": {"id": 6}
+    },
+    {
+      "id": 33,
+      "visit_date": "2025-07-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-07-06",
+      "endDate": "2025-07-16",
+      "lake": {"id": 6}
+    },
+    {
+      "id": 34,
+      "visit_date": "2025-08-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-08-06",
+      "endDate": "2025-08-16",
+      "lake": {"id": 6}
+    },
+    {
+      "id": 35,
+      "visit_date": "2025-09-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-09-06",
+      "endDate": "2025-09-16",
+      "lake": {"id": 6}
+    },
+    {
+      "id": 36,
+      "visit_date": "2025-10-20T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-10-06",
+      "endDate": "2025-10-16",
+      "lake": {"id": 6}
+    },
+
+    
+    {
+      "id": 37,
+      "visit_date": "2025-05-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-05-07",
+      "endDate": "2025-05-17",
+      "lake": {"id": 7}
+    },
+    {
+      "id": 38,
+      "visit_date": "2025-06-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-06-07",
+      "endDate": "2025-06-17",
+      "lake": {"id": 7}
+    },
+    {
+      "id": 39,
+      "visit_date": "2025-07-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-07-07",
+      "endDate": "2025-07-17",
+      "lake": {"id": 7}
+    },
+    {
+      "id": 40,
+      "visit_date": "2025-08-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Survey",
+      "startDate": "2025-08-07",
+      "endDate": "2025-08-17",
+      "lake": {"id": 7}
+    },
+    {
+      "id": 41,
+      "visit_date": "2025-09-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Stock Check",
+      "startDate": "2025-09-07",
+      "endDate": "2025-09-17",
+      "lake": {"id": 7}
+    },
+    {
+      "id": 42,
+      "visit_date": "2025-10-21T00:00:00Z",
+      "officer_name": "",
+      "visit_type": "Monitoring",
+      "startDate": "2025-10-07",
+      "endDate": "2025-10-17",
+      "lake": {"id": 7}
+    }
+  ]
 }

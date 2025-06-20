@@ -29,6 +29,35 @@
       "type": "boolean",
       "required": true
     },
+    "water_quality": {
+      "type": "enumeration",
+      "enum": [
+        "Fair",
+        "Good",
+        "Bad"
+      ]
+    },
+    "temperature_c": {
+      "type": "decimal"
+    },
+    "dissolved_oxygen_mgL": {
+      "type": "decimal"
+    },
+    "ph_level": {
+      "type": "decimal"
+    },
+    "ammonia_mgL": {
+      "type": "decimal"
+    },
+    "nitrite_mgL": {
+      "type": "decimal"
+    },
+    "algae_present": {
+      "type": "boolean"
+    },
+    "recommended_actions": {
+      "type": "text"
+    },
     "report_detail": {
       "type": "richtext",
       "required": true
