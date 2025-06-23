@@ -11,39 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "report_title": {
-      "type": "string",
-      "required": true
+    "dissolved_oxygen": {
+      "type": "decimal"
     },
-    "report_date": {
-      "type": "datetime"
-    },
-    "fish_count": {
-      "type": "biginteger"
-    },
-    "disease_signs": {
-      "type": "boolean",
-      "required": true
-    },
-    "lab_sample_taken": {
-      "type": "boolean",
-      "required": true
-    },
-    "water_quality": {
-      "type": "enumeration",
-      "enum": [
-        "Fair",
-        "Good",
-        "Bad"
-      ]
+    "ph_level": {
+      "type": "decimal"
     },
     "temperature_c": {
       "type": "decimal"
     },
-    "dissolved_oxygen_mgL": {
-      "type": "decimal"
-    },
-    "ph_level": {
+    "turbidity_ntu": {
       "type": "decimal"
     },
     "ammonia_mgL": {
@@ -52,26 +29,26 @@
     "nitrite_mgL": {
       "type": "decimal"
     },
-    "algae_present": {
-      "type": "boolean"
+    "nitrate_mgL": {
+      "type": "decimal"
     },
-    "recommended_actions": {
-      "type": "text"
+    "organic_matter_level": {
+      "type": "decimal"
     },
-    "report_detail": {
-      "type": "richtext",
-      "required": true
+    "phosphorus_mgL": {
+      "type": "decimal"
     },
-    "report_file": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "nitrogen_mgL": {
+      "type": "decimal"
+    },
+    "water_depth_m": {
+      "type": "decimal"
+    },
+    "retention_time_days": {
+      "type": "integer"
+    },
+    "inflow_outflow_status": {
+      "type": "string"
     },
     "lake_visit": {
       "type": "relation",
