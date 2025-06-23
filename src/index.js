@@ -39,26 +39,26 @@ module.exports = {
     console.log("🛠️ Bootstrapping Strapi with Socket.IO...");
 
     // Attach Socket.IO to Strapi's internal HTTP server
-    const io = new Server(strapi.server.httpServer, {
-      cors: {
-        origin: "http://localhost:5173/",
-        methods: ["GET", "POST"],
-        credentials: true,
-      },
-      transports: ["websocket"],
-    });
+  //   const io = new Server(strapi.server.httpServer, {
+  //     cors: {
+  //       origin: "http://localhost:5173/",
+  //       methods: ["GET", "POST"],
+  //       credentials: true,
+  //     },
+  //     transports: ["websocket"],
+  //   });
 
-    global.io = io;
+  //   global.io = io;
 
-    io.on("connection", (socket) => {
-      console.log(`🟢 Client connected: ${socket.id}`);
+  //   io.on("connection", (socket) => {
+  //     console.log(`🟢 Client connected: ${socket.id}`);
 
-      socket.on("disconnect", () => {
-        console.log(`🔴 Client disconnected: ${socket.id}`);
-      });
-    });
+  //     socket.on("disconnect", () => {
+  //       console.log(`🔴 Client disconnected: ${socket.id}`);
+  //     });
+  //   });
 
-    console.log("✅ Socket.IO is attached and ready!");
-    console.log("📡 Listening for client connections...");
-  },
+  //   console.log("✅ Socket.IO is attached and ready!");
+  //   console.log("📡 Listening for client connections...");
+   },
 };
