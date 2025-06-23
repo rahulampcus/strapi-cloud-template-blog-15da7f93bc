@@ -543,15 +543,12 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    algae_present: Schema.Attribute.Boolean;
     ammonia_mgL: Schema.Attribute.Decimal;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    disease_signs: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    dissolved_oxygen_mgL: Schema.Attribute.Decimal;
-    fish_count: Schema.Attribute.BigInteger;
-    lab_sample_taken: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    dissolved_oxygen: Schema.Attribute.Decimal;
+    inflow_outflow_status: Schema.Attribute.String;
     lake_visit: Schema.Attribute.Relation<
       'oneToOne',
       'api::lake-visit.lake-visit'
@@ -562,23 +559,20 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
       'api::visit-report.visit-report'
     > &
       Schema.Attribute.Private;
+    nitrate_mgL: Schema.Attribute.Decimal;
     nitrite_mgL: Schema.Attribute.Decimal;
+    nitrogen_mgL: Schema.Attribute.Decimal;
+    organic_matter_level: Schema.Attribute.Decimal;
     ph_level: Schema.Attribute.Decimal;
+    phosphorus_mgL: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
-    recommended_actions: Schema.Attribute.Text;
-    report_date: Schema.Attribute.DateTime;
-    report_detail: Schema.Attribute.RichText & Schema.Attribute.Required;
-    report_file: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
-      Schema.Attribute.Required;
-    report_title: Schema.Attribute.String & Schema.Attribute.Required;
+    retention_time_days: Schema.Attribute.Integer;
     temperature_c: Schema.Attribute.Decimal;
+    turbidity_ntu: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    water_quality: Schema.Attribute.Enumeration<['Fair', 'Good', 'Bad']>;
+    water_depth_m: Schema.Attribute.Decimal;
   };
 }
 
