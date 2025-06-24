@@ -554,12 +554,14 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::lake-visit.lake-visit'
     >;
+    latitude: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::visit-report.visit-report'
     > &
       Schema.Attribute.Private;
+    longitude: Schema.Attribute.Decimal;
     nitrate_mgL: Schema.Attribute.Decimal;
     nitrite_mgL: Schema.Attribute.Decimal;
     nitrogen_mgL: Schema.Attribute.Decimal;
@@ -569,10 +571,14 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     retention_time_days: Schema.Attribute.Integer;
     temperature_c: Schema.Attribute.Decimal;
+    thumb_detection: Schema.Attribute.Boolean;
     turbidity_ntu: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visit_photos: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     water_depth_m: Schema.Attribute.Decimal;
   };
 }

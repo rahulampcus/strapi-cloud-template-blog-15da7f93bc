@@ -47,8 +47,27 @@
     "retention_time_days": {
       "type": "integer"
     },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
+    "thumb_detection": {
+      "type": "boolean"
+    },
     "inflow_outflow_status": {
       "type": "string"
+    },
+    "visit_photos": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "lake_visit": {
       "type": "relation",
