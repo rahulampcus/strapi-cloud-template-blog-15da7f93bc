@@ -483,6 +483,7 @@ export interface ApiLakeVisitLakeVisit extends Struct.CollectionTypeSchema {
         'IN-REVIEW',
         'OFFICE-REJECTED',
         'NEED-MORE-INFO',
+        'READY-FOR-VISIT',
       ]
     > &
       Schema.Attribute.DefaultTo<'NOT-STARTED'>;

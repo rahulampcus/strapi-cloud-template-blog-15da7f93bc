@@ -34,18 +34,6 @@
     "endDate": {
       "type": "date"
     },
-    "lake": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::lake.lake",
-      "inversedBy": "lake_visits"
-    },
-    "visit_report": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::visit-report.visit-report",
-      "inversedBy": "lake_visit"
-    },
     "visitStatus": {
       "type": "enumeration",
       "default": "NOT-STARTED",
@@ -56,7 +44,8 @@
         "IN-PROGRESS",
         "IN-REVIEW",
         "OFFICE-REJECTED",
-        "NEED-MORE-INFO"
+        "NEED-MORE-INFO",
+        "READY-FOR-VISIT"
       ]
     },
     "officerRemark": {
@@ -69,6 +58,18 @@
     },
     "officerRemarkInfo": {
       "type": "text"
+    },
+    "lake": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lake.lake",
+      "inversedBy": "lake_visits"
+    },
+    "visit_report": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::visit-report.visit-report",
+      "inversedBy": "lake_visit"
     }
   }
 }
