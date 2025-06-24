@@ -44,7 +44,8 @@
         "IN-PROGRESS",
         "IN-REVIEW",
         "OFFICE-REJECTED",
-        "NEED-MORE-INFO"
+        "NEED-MORE-INFO",
+        "READY-FOR-VISIT"
       ]
     },
     "officerRemark": {
