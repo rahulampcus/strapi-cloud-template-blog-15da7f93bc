@@ -31,30 +31,29 @@ module.exports = {
     const cronTasks = require("./cron-tasks");
     cronTasks.start(strapi); // Start cron jobs
 
-    // const { Server } = require("socket.io");
+    //   const { Server } = require("socket.io");
 
-    // // Attach Socket.IO to Strapi's internal HTTP server
-    // const io = new Server(strapi.server.httpServer, {
-    //   cors: {
-    //     origin: "http://localhost:5173/",
-    //     methods: ["GET", "POST"],
-    //     credentials: true,
-    //   },
-    //   transports: ["websocket"],
-    // });
-
-    // global.io = io;
-
-    // io.on("connection", (socket) => {
-    //   console.log(`🟢 Client connected: ${socket.id}`);
-
-    //   socket.on("disconnect", () => {
-    //     console.log(`🔴 Client disconnected: ${socket.id}`);
+    //   // Attach Socket.IO to Strapi's internal HTTP server
+    //   const io = new Server(strapi.server.httpServer, {
+    //     cors: {
+    //       origin: "http://localhost:5173/",
+    //       methods: ["GET", "POST"],
+    //       credentials: true,
+    //     },
+    //     transports: ["websocket"],
     //   });
-    // });
 
-    // console.log("✅ Socket.IO is attached and ready!");
-    // console.log("📡 Listening for client connections...");
+    //   global.io = io;
+
+    //   io.on("connection", (socket) => {
+    //     console.log(`🟢 Client connected: ${socket.id}`);
+
+    //     socket.on("disconnect", () => {
+    //       console.log(`🔴 Client disconnected: ${socket.id}`);
+    //     });
+    //   });
+    //   console.log("✅ Socket.IO is attached and ready!");
+    //   console.log("📡 Listening for client connections...");
   },
 
   /**

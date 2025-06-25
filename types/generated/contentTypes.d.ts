@@ -577,7 +577,8 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     visit_photos: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     water_depth_m: Schema.Attribute.Decimal;
   };

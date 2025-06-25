@@ -61,7 +61,7 @@
     },
     "visit_photos": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",
