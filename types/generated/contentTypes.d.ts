@@ -569,6 +569,7 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
     ph_level: Schema.Attribute.Decimal;
     phosphorus_mgL: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
+    remark: Schema.Attribute.Text;
     retention_time_days: Schema.Attribute.Integer;
     temperature_c: Schema.Attribute.Decimal;
     thumb_detection: Schema.Attribute.Boolean;

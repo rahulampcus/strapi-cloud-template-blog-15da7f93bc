@@ -59,6 +59,9 @@
     "inflow_outflow_status": {
       "type": "string"
     },
+    "remark": {
+      "type": "text"
+    },
     "visit_photos": {
       "type": "media",
       "multiple": true,
