@@ -59,8 +59,21 @@
     "inflow_outflow_status": {
       "type": "string"
     },
+    "location": {
+      "type": "string"
+    },
     "remark": {
       "type": "text"
+    },
+    "officer_selfie": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "visit_photos": {
       "type": "media",

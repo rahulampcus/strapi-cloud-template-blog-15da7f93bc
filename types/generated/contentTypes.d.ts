@@ -484,6 +484,7 @@ export interface ApiLakeVisitLakeVisit extends Struct.CollectionTypeSchema {
         'OFFICE-REJECTED',
         'NEED-MORE-INFO',
         'READY-FOR-VISIT',
+        'ASSIGNED',
       ]
     > &
       Schema.Attribute.DefaultTo<'NOT-STARTED'>;
@@ -561,10 +562,14 @@ export interface ApiVisitReportVisitReport extends Struct.CollectionTypeSchema {
       'api::visit-report.visit-report'
     > &
       Schema.Attribute.Private;
+    location: Schema.Attribute.String;
     longitude: Schema.Attribute.Decimal;
     nitrate_mgL: Schema.Attribute.Decimal;
     nitrite_mgL: Schema.Attribute.Decimal;
     nitrogen_mgL: Schema.Attribute.Decimal;
+    officer_selfie: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     organic_matter_level: Schema.Attribute.Decimal;
     ph_level: Schema.Attribute.Decimal;
     phosphorus_mgL: Schema.Attribute.Decimal;

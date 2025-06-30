@@ -45,7 +45,8 @@
         "IN-REVIEW",
         "OFFICE-REJECTED",
         "NEED-MORE-INFO",
-        "READY-FOR-VISIT"
+        "READY-FOR-VISIT",
+        "ASSIGNED"
       ]
     },
     "officerRemark": {
